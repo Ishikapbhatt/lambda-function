@@ -15,7 +15,7 @@ def lambda_handler(event, context):
         
         file_object = s3.get_object(Bucket=bucket_name, Key=filename)
         
-        file_content - file_object["Body"].read().decode("utf-8")
+        file_content = file_object["Body"].read().decode("utf-8")
         
         print(file_content)
         
